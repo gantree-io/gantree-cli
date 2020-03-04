@@ -1,4 +1,4 @@
-const { Gantree, throwGantreeError } = require('../../../gantree-lib-nodejs')
+const { Gantree, throwGantreeError } = require('gantree-lib')
 
 const gantree = new Gantree()
 
