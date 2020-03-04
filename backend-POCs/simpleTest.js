@@ -1,5 +1,4 @@
 const { exec } = require('child_process')
-const chalk = require('chalk')
 
 // AVAILABLE ERROR CODES:
 // 3 - 125
@@ -33,7 +32,7 @@ const runCliCommand = async (command, options = {}) => {
 
     child.on('close', code => {
       if (code !== 0) {
-        console.log(chalk.red(stderr_output.toString()))
+        console.log(stderr_output.toString())
         reject(new Error(code))
       } else {
         resolve(all_output)
@@ -46,7 +45,7 @@ async function run() {
   console.log('[POC] RUNNING...')
   try {
     await runCliCommand(
-      'node . sync --config samples/config/cheap_aws.sample.json'
+      'node . sync --config samples/config/fetch/fetch_aws.sample.json'
     )
     console.log('[POC] SUCCESS.')
   } catch (e) {
