@@ -1,11 +1,17 @@
 #!/usr/bin/env node
 
 const program = require('commander')
-const version = require('./lib/version')
+const packageMeta = require('./lib/packageMeta')
 const { syncWrapper } = require('./cli/syncWrapper')
 const { cleanWrapper } = require('./cli/cleanWrapper')
 
-program.version(version.show())
+function returnVersionString() {
+  const name = packageMeta.getName()
+  const version = packageMeta.getVersion()
+  return `${name} ${version}`
+}
+
+program.version(returnVersionString())
 
 program
   .command('sync')

@@ -1,7 +1,7 @@
 const path = require('path')
 const files = require('./files')
 
-function show() {
+function getVersion() {
   const targetPath = path.join(
     path.dirname(module.filename),
     '..',
@@ -13,6 +13,19 @@ function show() {
   return pkg.version
 }
 
+function getName() {
+  const targetPath = path.join(
+    path.dirname(module.filename),
+    '..',
+    '..',
+    'package.json'
+  )
+  const pkg = files.readJSON(targetPath)
+
+  return pkg.name
+}
+
 module.exports = {
-  show
+  getVersion,
+  getName
 }
