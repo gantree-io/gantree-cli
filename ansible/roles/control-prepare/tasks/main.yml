@@ -1,6 +1,0 @@
----
-# tasks file for control-prepare
-- name: remove session dir from host
-  file:
-    path: "{{ gantree_control_working }}/session"
-    state: absent

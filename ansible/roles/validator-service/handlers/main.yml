@@ -1,4 +1,0 @@
----
-# handlers file for validator-service
-- name: reload systemctl
-  command: systemctl daemon-reload
