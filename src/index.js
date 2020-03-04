@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+const { Gantree } = require('gantree-lib')
+console.log(Gantree)
+
 const path = require('path')
 const process = require('process')
 const program = require('commander')
