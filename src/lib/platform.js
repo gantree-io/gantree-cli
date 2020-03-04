@@ -1,8 +1,15 @@
 const asyncUtils = require('./async.js')
 const { Terraform } = require('./clients/terraform')
+const { throwGantreeError } = require('./error')
 
 class Platform {
   constructor(cfg) {
+    if (cfg === undefined) {
+      throwGantreeError(
+        'MISSING_ARGUMENTS',
+        Error('Platform requires a config')
+      )
+    }
     this.config = JSON.parse(JSON.stringify(cfg))
 
     this.tf = new Terraform(this.config)
@@ -14,7 +21,8 @@ class Platform {
       'validator',
       this.config.validators.nodes
     )
-    return { validatorIpAddresses }
+    const infraObj = { validatorIpAddresses }
+    return Promise.resolve(infraObj)
   }
 
   async clean() {

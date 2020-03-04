@@ -15,6 +15,7 @@ class Ansible {
   constructor(cfg) {
     this.config = JSON.parse(JSON.stringify(cfg))
 
+    // todo: not maintainable, replace any of these paths with a package-wide variable
     this.ansiblePath = path.join(__dirname, '..', '..', '..', 'ansible')
     this.options = {
       cwd: this.ansiblePath,
@@ -37,6 +38,7 @@ class Ansible {
   }
 
   _writeInventory() {
+    // todo: not maintainable, replace any of these paths with a package-wide variable
     const origin = path.resolve(
       __dirname,
       '..',
@@ -55,6 +57,7 @@ class Ansible {
     const substrateOptions = this._arrayify(
       this.config.validators.substrateOptions
     )
+    //todo: references to this should be .repoVersion not .version
     const version = this._getVersion(this.config.binary.version)
     // console.log({ origin, project, buildDir, target, validators, bootnodes, version })
     logger.info(`Preparing nodes with version ${version}`)
