@@ -123,7 +123,8 @@ const getVars = (item, defaults) => {
     substrate_group: item.substrate_group || defaults.substrate_group,
     ansible_user: item.sshUser || defaults.ansbile_user,
     substrate_chain: `/home/${substrate_user}/tmp/gantree-validator/spec/chainSpecRaw.raw`,
-    gantree_working: `/home/${substrate_user}/tmp/gantree-validator`
+    gantree_working: `/home/${substrate_user}/tmp/gantree-validator`,
+    substrate_mnemonic: item.mnemonic || 'false'
   }
 }
 
