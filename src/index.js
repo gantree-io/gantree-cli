@@ -4,6 +4,8 @@ const program = require('commander')
 const packageMeta = require('./lib/packageMeta')
 const { syncWrapper } = require('./cli/syncWrapper')
 const { cleanWrapper } = require('./cli/cleanWrapper')
+// this is temporary
+const { ansibleSyncWrapper } = require('./cli/ansibleSyncWrapper')
 
 function returnVersionString() {
   const name = packageMeta.getName()
@@ -18,6 +20,13 @@ program
   .description('Synchronizes the infrastructure.')
   .option('-c, --config [config] (required)', 'Path to config file.')
   .action(syncWrapper)
+
+program
+  .command('ansibleSync')
+  .description(
+    'Synchronizes the infrastructure with ansible (temporary implementation).'
+  )
+  .action(ansibleSyncWrapper)
 
 program
   .command('clean')
