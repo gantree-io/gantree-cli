@@ -2,7 +2,6 @@ const { Gantree, packageDir } = require('gantree-lib')
 const path = require('path')
 const inventoryPath = path.join(packageDir, '/inventory')
 const ansiblePath = path.join(packageDir, '/ansible')
-console.log(packageDir)
 
 const gantree = new Gantree()
 
