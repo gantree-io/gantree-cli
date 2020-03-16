@@ -2,11 +2,12 @@
 
 const program = require('commander')
 const packageMeta = require('./lib/packageMeta')
-const { syncWrapper } = require('./cli/syncWrapper')
-const { cleanWrapper } = require('./cli/cleanWrapper')
-// this is temporary
+// subject to change
 const { ansibleSyncWrapper } = require('./cli/ansibleSyncWrapper')
 const { ansibleCleanWrapper } = require('./cli/ansibleCleanWrapper')
+// for reference
+// const { syncWrapper } = require('./cli/syncWrapper')
+// const { cleanWrapper } = require('./cli/cleanWrapper')
 
 function returnVersionString() {
   const name = packageMeta.getName()
@@ -18,29 +19,29 @@ program.version(returnVersionString())
 
 program
   .command('sync')
-  .description('Synchronizes the infrastructure.')
-  .option('-c, --config [config] (required)', 'Path to config file.')
-  .action(syncWrapper)
-
-program
-  .command('ansibleSync')
   .description(
     'Synchronizes the infrastructure with ansible (temporary implementation).'
   )
   .action(ansibleSyncWrapper)
 
 program
-  .command('ansibleClean')
+  .command('clean')
   .description(
     'Destorys the infrastructure with ansible (temporary implementation).'
   )
   .action(ansibleCleanWrapper)
 
-program
-  .command('clean')
-  .description('Removes all the resources.')
-  .option('-c, --config [config] (required)', 'Path to config file.')
-  .action(cleanWrapper)
+// program
+//   .command('legacySync')
+//   .description('Synchronizes the infrastructure.')
+//   .option('-c, --config [config] (required)', 'Path to config file.')
+//   .action(syncWrapper)
+
+// program
+//   .command('legacyClean')
+//   .description('Removes all the resources.')
+//   .option('-c, --config [config] (required)', 'Path to config file.')
+//   .action(cleanWrapper)
 
 program.allowUnknownOption(false)
 
