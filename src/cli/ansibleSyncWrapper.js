@@ -5,9 +5,8 @@ const ansiblePath = path.join(packageDir, '/ansible')
 
 const gantree = new Gantree()
 
-console.warn('Please note, ansibleSync is a temporary subcommand.')
-
 async function ansibleSyncWrapper() {
+  console.warn('Please note, ansibleSync is a temporary subcommand.')
   await gantree.ansibleSyncAll(inventoryPath, ansiblePath)
 }
 
