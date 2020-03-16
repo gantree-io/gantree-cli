@@ -6,6 +6,7 @@ const { syncWrapper } = require('./cli/syncWrapper')
 const { cleanWrapper } = require('./cli/cleanWrapper')
 // this is temporary
 const { ansibleSyncWrapper } = require('./cli/ansibleSyncWrapper')
+const { ansibleCleanWrapper } = require('./cli/ansibleCleanWrapper')
 
 function returnVersionString() {
   const name = packageMeta.getName()
@@ -27,6 +28,13 @@ program
     'Synchronizes the infrastructure with ansible (temporary implementation).'
   )
   .action(ansibleSyncWrapper)
+
+program
+  .command('ansibleClean')
+  .description(
+    'Destorys the infrastructure with ansible (temporary implementation).'
+  )
+  .action(ansibleCleanWrapper)
 
 program
   .command('clean')
