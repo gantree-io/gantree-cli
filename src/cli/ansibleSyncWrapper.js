@@ -8,7 +8,7 @@ const gantree = new Gantree()
 
 async function ansibleSyncWrapper() {
   console.log(gantreeTitle)
-  console.warn('Please note, ansibleSync is a temporary subcommand.')
+  console.warn('[!] Please note, this subcommand is still in beta\n')
   await gantree.ansibleSyncAll(inventoryPath, ansiblePath)
 }
 

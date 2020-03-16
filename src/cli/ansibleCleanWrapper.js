@@ -8,7 +8,7 @@ const gantree = new Gantree()
 
 async function ansibleCleanWrapper() {
   console.log(gantreeTitle)
-  console.warn('Please note, ansibleClean is a temporary subcommand.')
+  console.warn('[!] Please note, this subcommand is still in beta\n')
   await gantree.ansibleCleanAll(inventoryPath, ansiblePath)
 }
 
