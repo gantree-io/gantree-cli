@@ -1,15 +1,12 @@
-const { Gantree, packageDir } = require('gantree-lib')
+const { Gantree } = require('gantree-lib')
 const { gantreeTitle } = require('../lib/art')
-const path = require('path')
-const inventoryPath = path.join(packageDir, '/inventory')
-const ansiblePath = path.join(packageDir, '/ansible')
 
 const gantree = new Gantree()
 
 async function ansibleSyncWrapper() {
   console.log(gantreeTitle)
   console.warn('[!] Please note, this subcommand is still in beta\n')
-  await gantree.ansibleSyncAll(inventoryPath, ansiblePath)
+  await gantree.ansibleSyncAll()
 }
 
 module.exports = {
