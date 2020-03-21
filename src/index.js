@@ -3,8 +3,8 @@
 const program = require('commander')
 const packageMeta = require('./lib/packageMeta')
 // subject to change
-const { ansibleSyncWrapper } = require('./cli/ansibleSyncWrapper')
-const { ansibleCleanWrapper } = require('./cli/ansibleCleanWrapper')
+const { syncWrapper } = require('./cli/syncWrapper')
+const { cleanWrapper } = require('./cli/cleanWrapper')
 // for reference
 // const { syncWrapper } = require('./cli/syncWrapper')
 // const { cleanWrapper } = require('./cli/cleanWrapper')
@@ -22,14 +22,14 @@ program
   .description(
     'Synchronizes the infrastructure with ansible (temporary implementation).'
   )
-  .action(ansibleSyncWrapper)
+  .action(syncWrapper)
 
 program
   .command('clean')
   .description(
     'Destorys the infrastructure with ansible (temporary implementation).'
   )
-  .action(ansibleCleanWrapper)
+  .action(cleanWrapper)
 
 // program
 //   .command('legacySync')
