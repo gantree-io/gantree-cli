@@ -22,13 +22,15 @@ program
   .description(
     'Synchronizes the infrastructure with ansible (temporary implementation).'
   )
+  .option('-c, --config [config] (required)', 'Path to config file.')
   .action(syncWrapper)
 
 program
   .command('clean')
   .description(
-    'Destorys the infrastructure with ansible (temporary implementation).'
+    'Destroys the infrastructure with ansible (temporary implementation).'
   )
+  .option('-c, --config [config] (required)', 'Path to config file.')
   .action(cleanWrapper)
 
 // program
