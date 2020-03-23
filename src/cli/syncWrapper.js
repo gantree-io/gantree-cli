@@ -5,7 +5,7 @@ const gantree = new Gantree()
 
 async function syncWrapper(args) {
   const gantreeConfigPath = args.config || process.env.GANTREE_CONFIG_PATH
-  const namespaceOverride = process.env.GANTREE_OVERRIDE_NAMESPACE
+  const projectPathOverride = process.env.GANTREE_OVERRIDE_PROJECT_PATH
 
   if (gantreeConfigPath === undefined) {
     console.log(
@@ -16,16 +16,22 @@ async function syncWrapper(args) {
 
   console.log(gantreeTitle)
   console.warn('[!] Please note, this subcommand is still in beta\n')
+  if (process.env.GANTREE_CONFIG_PATH !== undefined) {
+    console.warn('[!] Using override for Gantree config path\n')
+  }
+  if (process.env.GANTREE_OVERRIDE_PROJECT_PATH !== undefined) {
+    console.warn('[!] Using override for project path\n')
+  }
 
   // read and validate config
   const gantreeConfigObj = await gantree.returnConfig(gantreeConfigPath)
 
-  // inject any overrides
-  if (namespaceOverride !== undefined) {
-    gantreeConfigObj.metadata.project = namespaceOverride
-  }
+  // inject any config overrides
+  // - none at the moment
 
-  await gantree.syncAll(gantreeConfigObj)
+  await gantree.syncAll(gantreeConfigObj, undefined, {
+    projectPathOverride: projectPathOverride
+  })
 }
 
 module.exports = {
