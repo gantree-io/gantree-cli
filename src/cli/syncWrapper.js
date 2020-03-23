@@ -4,6 +4,7 @@ const { gantreeTitle } = require('../lib/art')
 const gantree = new Gantree()
 
 async function syncWrapper(args) {
+  // TODO: FIX: needs refactor, shares a lot of code with clean wrapper
   const gantreeConfigPath = args.config || process.env.GANTREE_CONFIG_PATH
   const projectPathOverride = process.env.GANTREE_OVERRIDE_PROJECT_PATH
 
