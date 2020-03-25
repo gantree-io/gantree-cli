@@ -16,12 +16,11 @@ async function syncWrapper(args) {
   }
 
   console.log(gantreeTitle)
-  console.warn('[!] Please note, this subcommand is still in beta\n')
   if (process.env.GANTREE_CONFIG_PATH !== undefined) {
-    console.warn('[!] Using override for Gantree config path\n')
+    console.log('[!] Using override for Gantree config path\n')
   }
   if (process.env.GANTREE_OVERRIDE_PROJECT_PATH !== undefined) {
-    console.warn('[!] Using override for project path\n')
+    console.log('[!] Using override for project path\n')
   }
 
   // read and validate config
