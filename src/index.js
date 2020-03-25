@@ -30,18 +30,6 @@ program
   .option('-c, --config [config] (required)', 'Path to config file.')
   .action(cleanWrapper)
 
-// program
-//   .command('legacySync')
-//   .description('Synchronizes the infrastructure.')
-//   .option('-c, --config [config] (required)', 'Path to config file.')
-//   .action(syncWrapper)
-
-// program
-//   .command('legacyClean')
-//   .description('Removes all the resources.')
-//   .option('-c, --config [config] (required)', 'Path to config file.')
-//   .action(cleanWrapper)
-
 program.allowUnknownOption(false)
 
 const parsed = program.parse(process.argv)
