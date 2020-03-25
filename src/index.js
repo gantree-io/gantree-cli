@@ -2,17 +2,14 @@
 
 const program = require('commander')
 const packageMeta = require('./lib/packageMeta')
-// subject to change
 const { syncWrapper } = require('./cli/syncWrapper')
 const { cleanWrapper } = require('./cli/cleanWrapper')
-// for reference
-// const { syncWrapper } = require('./cli/syncWrapper')
-// const { cleanWrapper } = require('./cli/cleanWrapper')
+const gantreeLib = require('gantree-lib')
 
 function returnVersionString() {
   const name = packageMeta.getName()
   const version = packageMeta.getVersion()
-  return `${name} ${version}`
+  return `${name} ${version}\n⮡ ${gantreeLib.name} ${gantreeLib.version}`
 }
 
 program.version(returnVersionString())
