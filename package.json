@@ -1,6 +1,6 @@
 {
   "name": "gantree-cli",
-  "version": "0.5.0-b2",
+  "version": "0.5.1-b",
   "main": "src/index.js",
   "repository": "https://github.com/flex-dapps/gantree-cli",
   "author": "Flex Dapps",
