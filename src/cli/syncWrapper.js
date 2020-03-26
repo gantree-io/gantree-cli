@@ -26,9 +26,6 @@ async function syncWrapper(args) {
   // read and validate config
   const gantreeConfigObj = await gantree.returnConfig(gantreeConfigPath)
 
-  // inject any config overrides
-  // - none at the moment
-
   await gantree.syncAll(gantreeConfigObj, undefined, {
     projectPathOverride: projectPathOverride
   })
