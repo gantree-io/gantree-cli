@@ -16,16 +16,14 @@ program.version(returnVersionString())
 
 program
   .command('sync')
-  .description(
-    'Synchronizes the infrastructure with ansible (temporary implementation).'
-  )
+  .description('Create/update infrastructure based on Gantree configuration.')
   .option('-c, --config [config] (required)', 'Path to config file.')
   .action(syncWrapper)
 
 program
   .command('clean')
   .description(
-    'Destroys the infrastructure with ansible (temporary implementation).'
+    'Destroy existing infrastructure based on Gantree configuration.'
   )
   .option('-c, --config [config] (required)', 'Path to config file.')
   .action(cleanWrapper)
