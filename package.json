@@ -30,10 +30,7 @@
     "gantree-cli": "src/index.js"
   },
   "files": [
-    "/ansible",
-    "/src",
-    "/terraform",
-    "/tpl"
+    "/src"
   ],
   "dependencies": {
     "commander": "^2.20.0",
