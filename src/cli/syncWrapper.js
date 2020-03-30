@@ -6,6 +6,7 @@ const gantree = new Gantree()
 async function syncWrapper(args) {
   // TODO: FIX: needs refactor, shares a lot of code with clean wrapper
   const gantreeConfigPath = args.config || process.env.GANTREE_CONFIG_PATH
+  const strict = args.strict || Boolean(process.env.GANTREE_STRICT_OPERATIONS)
   const projectPathOverride = process.env.GANTREE_OVERRIDE_PROJECT_PATH
 
   if (gantreeConfigPath === undefined) {
@@ -16,6 +17,11 @@ async function syncWrapper(args) {
   }
 
   console.log(gantreeTitle)
+  if (strict === true) {
+    console.log(
+      '[!] Using strict mode, some operations will exit if validation fails\n'
+    )
+  }
   if (process.env.GANTREE_CONFIG_PATH !== undefined) {
     console.log('[!] Using override for Gantree config path\n')
   }
@@ -27,7 +33,8 @@ async function syncWrapper(args) {
   const gantreeConfigObj = await gantree.returnConfig(gantreeConfigPath)
 
   await gantree.syncAll(gantreeConfigObj, undefined, {
-    projectPathOverride: projectPathOverride
+    projectPathOverride: projectPathOverride,
+    strict: strict
   })
 }
 

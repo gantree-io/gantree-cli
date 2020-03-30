@@ -18,6 +18,7 @@ program
   .command('sync')
   .description('Create/update infrastructure based on Gantree configuration.')
   .option('-c, --config [config] (required)', 'Path to config file.')
+  .option('-s, --strict', 'Enable strict mode.')
   .action(syncWrapper)
 
 program
