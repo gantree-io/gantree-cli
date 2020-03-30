@@ -19,7 +19,3 @@ setup_env_vars.sh
 # unknown
 build/*
 .env
-
-# terraform
-tfstate
-tfstate.backup
