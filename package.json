@@ -1,6 +1,6 @@
 {
   "name": "gantree-cli",
-  "version": "0.7.3-alpha.0",
+  "version": "0.7.3-alpha.1",
   "main": "src/index.js",
   "repository": "https://github.com/flex-dapps/gantree-cli",
   "author": "Flex Dapps",
@@ -35,7 +35,7 @@
   "dependencies": {
     "commander": "^2.20.0",
     "fs-extra": "^8.1.0",
-    "gantree-lib": "^0.5.4"
+    "gantree-lib": "^0.5.5-alpha"
   },
   "devDependencies": {
     "eslint": "5.16.0",
