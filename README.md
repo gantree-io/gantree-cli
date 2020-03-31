@@ -4,15 +4,15 @@ A command-line interface for gantree-lib written in NodeJS.
 
 ## About
 
-For more details, please see [gantree-lib]([https://](https://github.com/flex-dapps/gantree-lib-nodejs)
+For more details, please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodejs)
 
 ## Requirements
 
-For more details, please see [gantree-lib]([https://](https://github.com/flex-dapps/gantree-lib-nodejs)
+For more details, please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodejs)
 
 ## Creating configurations
 
-For more details, please see [gantree-lib]([https://](https://github.com/flex-dapps/gantree-lib-nodejs)
+For more details, please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodejs)
 
 ## Usage
 
