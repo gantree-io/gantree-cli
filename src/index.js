@@ -18,7 +18,15 @@ program
   .command('sync')
   .description('Create/update infrastructure based on Gantree configuration.')
   .option('-c, --config [config] (required)', 'Path to config file.')
-  .option('-s, --strict', 'Enable strict mode.')
+  .option(
+    '-s, --strict',
+    'Fail instead of printing warnings on some operations (e.g. hash validation)'
+  )
+  .option('-p, --project [project]', 'Force project path (advanced usage)')
+  .option(
+    '-i, --inventory [inventory]',
+    'Force inventory path (advanced usage)'
+  )
   .action(syncWrapper)
 
 program
@@ -27,6 +35,15 @@ program
     'Destroy existing infrastructure based on Gantree configuration.'
   )
   .option('-c, --config [config] (required)', 'Path to config file.')
+  .option(
+    '-s, --strict',
+    'Fail instead of printing warnings on some operations (e.g. hash validation)'
+  )
+  .option('-p, --project [project]', 'Force project path (advanced usage)')
+  .option(
+    '-i, --inventory [inventory]',
+    'Force inventory path (advanced usage)'
+  )
   .action(cleanWrapper)
 
 program.allowUnknownOption(false)
