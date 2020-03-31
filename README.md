@@ -10,6 +10,28 @@ Please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodej
 - How to write Gantree configurations
 - Misc. important information
 
+## Installation
+
+### External Requirements
+
+**Important:** Please ensure you have installed all external requirements for [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodejs) first.
+
+### Installing via npm
+
+To install the latest **stable** release, use:
+
+```bash
+npm install gantree-cli@stable
+```
+
+\- ***OR*** -
+
+To instead install the latest **beta** release, use:
+
+```bash
+npm install gantree-cli@beta
+```
+
 ## Usage
 
 ### Synchronisation
