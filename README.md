@@ -21,7 +21,7 @@ Please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodej
 To install the latest **stable** release, use:
 
 ```bash
-npm install gantree-cli@stable
+npm install gantree-cli@stable -g
 ```
 
 \- ***OR*** -
@@ -29,7 +29,7 @@ npm install gantree-cli@stable
 To instead install the latest **beta** release, use:
 
 ```bash
-npm install gantree-cli@beta
+npm install gantree-cli@beta -g
 ```
 
 ## Usage
