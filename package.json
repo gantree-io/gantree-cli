@@ -25,8 +25,8 @@
     "node": ">=10.15.2"
   },
   "pre-commit": [
-    "precommit",
-    "version-check"
+    "version-check",
+    "precommit"
   ],
   "bin": {
     "gantree-cli": "src/index.js"
