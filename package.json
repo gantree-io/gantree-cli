@@ -12,7 +12,8 @@
     "key-combine": "node . key-combine",
     "lint": "eslint .",
     "pretest": "yarn lint",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "version-check": "node ver_check.js"
   },
   "lint-staged": {
     "*.js": [
@@ -24,7 +25,8 @@
     "node": ">=10.15.2"
   },
   "pre-commit": [
-    "precommit"
+    "precommit",
+    "version-check"
   ],
   "bin": {
     "gantree-cli": "src/index.js"
