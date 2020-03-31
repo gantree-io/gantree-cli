@@ -2,17 +2,13 @@
 
 A command-line interface for gantree-lib written in NodeJS.
 
-## About
+## Important Note
 
-For more details, please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodejs)
+Please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodejs) for information regarding:
 
-## Requirements
-
-For more details, please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodejs)
-
-## Creating configurations
-
-For more details, please see [gantree-lib](https://https://github.com/flex-dapps/gantree-lib-nodejs)
+- Library requirements
+- How to write Gantree configurations
+- Misc. important information
 
 ## Usage
 
