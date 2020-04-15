@@ -37,7 +37,7 @@
   "dependencies": {
     "commander": "^2.20.0",
     "fs-extra": "^8.1.0",
-    "gantree-lib": "^0.6.3"
+    "gantree-lib": "^0.6.4"
   },
   "devDependencies": {
     "eslint": "5.16.0",
