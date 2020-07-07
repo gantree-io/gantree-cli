@@ -54,7 +54,4 @@ gantree-cli clean -c [gantree_config_file_path]
 
 See `gantree-cli clean --help` for all supported flags
 
-## Todo
-
-- Add information on CLI supported environment variables
-
+<!-- TODO: Add information on CLI supported environment variables -->
