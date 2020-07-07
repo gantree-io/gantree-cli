@@ -16,7 +16,7 @@ Please see [gantree-lib](https://github.com/flex-dapps/gantree-lib-nodejs) for i
 
 **Important:** Please ensure you have installed all external requirements for [gantree-lib](https://github.com/flex-dapps/gantree-lib-nodejs) first.
 
-### Installing via npm
+### Installing via NPM
 
 To install the latest **stable** release, use:
 
