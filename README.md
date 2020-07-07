@@ -32,6 +32,12 @@ To instead install the latest **beta** release, use:
 npm install gantree-cli@beta -g
 ```
 
+\- ***OR*** -
+
+To install **unstable** versions in active development, see [gantree-core](https://github.com/gantree-io/gantree-core).
+- Please note these versions may be incredibly buggy, potentially destructive, or even non-functional.
+- Due to rapid iteration, support is not yet offered.
+
 ## Usage
 
 ### Synchronisation
