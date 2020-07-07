@@ -2,6 +2,15 @@
 
 A command-line interface for gantree-lib written in NodeJS.
 
+- [Gantree CLI](#gantree-cli)
+  - [Important Note](#important-note)
+  - [Installation](#installation)
+    - [External Requirements](#external-requirements)
+    - [Installing via NPM](#installing-via-npm)
+  - [Usage](#usage)
+    - [Synchronisation](#synchronisation)
+    - [Cleaning up](#cleaning-up)
+
 ## Important Note
 
 Please see [gantree-lib](https://github.com/gantree-io/gantree-lib-nodejs) for information regarding:
