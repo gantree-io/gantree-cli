@@ -4,7 +4,7 @@ A command-line interface for gantree-lib written in NodeJS.
 
 ## Important Note
 
-Please see [gantree-lib](https://github.com/flex-dapps/gantree-lib-nodejs) for information regarding:
+Please see [gantree-lib](https://github.com/gantree-io/gantree-lib-nodejs) for information regarding:
 
 - Library requirements
 - How to write Gantree configurations
@@ -14,7 +14,7 @@ Please see [gantree-lib](https://github.com/flex-dapps/gantree-lib-nodejs) for i
 
 ### External Requirements
 
-**Important:** Please ensure you have installed all external requirements for [gantree-lib](https://github.com/flex-dapps/gantree-lib-nodejs) first.
+**Important:** Please ensure you have installed all external requirements for [gantree-lib](https://github.com/gantree-io/gantree-lib-nodejs) first.
 
 ### Installing via NPM
 
